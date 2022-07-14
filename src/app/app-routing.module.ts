@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WordleComponent } from "./wordle/wordle.component";
-import {HomeComponent} from "./home/home.component";
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'wordle-analyzer',
+    path: 'wordle',
     title: 'Wordle Analyzer',
     component: WordleComponent,
   }
@@ -21,4 +21,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -8,5 +8,5 @@ import { Title } from "@angular/platform-browser"
 })
 
 export class AppComponent {
-
+  title: string = "mattdo.me"
 }
