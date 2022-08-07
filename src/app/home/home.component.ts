@@ -5,14 +5,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
+
 export class HomeComponent implements OnInit {
 
   constructor() {
   }
 
   ngOnInit() {
-
   }
 
   title: string = 'mattdo.me'
+  skills: Array<string> = [
+    'Python',
+    'C',
+    'C++',
+    'Java',
+    'JavaScript',
+    'TypeScript',
+    'Node.js',
+    'git'
+  ]
 }

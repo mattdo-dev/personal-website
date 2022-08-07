@@ -2,23 +2,34 @@ $on-container: #d2e5f4
 $container: #374955
 
 #main
+  display: flex
+  flex-direction: column
   margin: 0 auto
   width: 700px
 
-#title-container
+#header
   display: block
   position: relative
   margin: 10px 0
-  padding: 15px 20px
-  border-radius: 4px
-  line-height: 1
+  padding: 15px 0
+  #title
+    font-size: 2.3rem
+    line-height: 1
 
 #title
   margin: 0
   color: #f6f9fc
 
-#content
-  padding: 15px 20px
-  background-color: $on-container&aa
-  border-radius: 4px
+#skills
+  display: flex
+  align-items: flex-start
+  margin: 5px 0
+  .option
+    display: inline-flex
+    margin: 0 6px 3px 0
+    padding: 3px 7px 2px
+    border-radius: 3px
+    background-color: #374955aa
 
+#content
+  margin: 15px 0
