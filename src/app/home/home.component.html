@@ -5,9 +5,8 @@
     <a routerLink=""><h1 id="title">{{title}}</h1></a>
   </section>
 
-  <section id ="skills">
-    <div class="option">Skill 1</div>
-    <div class="option">Skill 2</div>
+  <section id="skills">
+    <div class="option" *ngFor="let a of skills">{{ a }}</div>
   </section>
 
   <section id="content">
