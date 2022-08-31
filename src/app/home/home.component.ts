@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  title: string = 'mattdo.me'
+  title: string = 'mattdo.dev'
   skills: Array<string> = [
     'Python',
     'C',
