@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { fromEvent, Observable, Subscription } from "rxjs";
-import * as THREE from "three";
-import ThreeGlobe from "three-globe";
+import { Injectable } from '@angular/core'
+import { fromEvent, Observable, Subscription } from "rxjs"
+import * as THREE from "three"
+import ThreeGlobe from "three-globe"
 
 @Injectable()
 export class HomeCanvas {
@@ -13,14 +13,14 @@ export class HomeCanvas {
   }
 
   displayBackground() {
-    const N = 75;
+    const N = 75
     const arcsData = [...Array(N).keys()].map(() => ({
       startLat: (Math.random() - 0.5) * 180,
       startLng: (Math.random() - 0.5) * 360,
       endLat: (Math.random() - 0.5) * 180,
       endLng: (Math.random() - 0.5) * 360,
       color: "#535ef3"
-    }));
+    }))
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -50,30 +50,30 @@ export class HomeCanvas {
 
     globe.rotateX(Math.PI / 5)
     globe.rotateZ(Math.PI / 12)
-    scene.add(globe);
+    scene.add(globe)
     scene.add(new THREE.AmbientLight(0xf6f9fc, 0.2))
 
     const mainLight = new THREE.DirectionalLight(0x101010, 150)
-    mainLight.position.set(-800, 2000, 500);
+    mainLight.position.set(-800, 2000, 500)
     scene.add(mainLight)
 
-    scene.fog = new THREE.Fog(0x535ef3, 400, 600);
+    scene.fog = new THREE.Fog(0x535ef3, 400, 600)
 
     const animate = function() {
       requestAnimationFrame(animate)
       globe.rotateY(-Math.PI * (1/8196))
       renderer.render(scene, camera)
-    };
+    }
 
-    camera.position.z = 625;
-    renderer.render(scene, camera);
-    animate();
+    camera.position.z = 625
+    renderer.render(scene, camera)
+    animate()
 
     this.resizeObservable$ = fromEvent(window, 'resize')
     this.resizeSubscription$ = this.resizeObservable$.subscribe(() => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(window.innerWidth, window.innerHeight)
     })
   }
 }

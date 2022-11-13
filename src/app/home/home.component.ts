@@ -22,18 +22,16 @@ export class HomeComponent implements AfterViewInit {
     'Web UI/UX'
   ]
   gitlab: string = 'https://gitlab.com/mattdos'
-  github: string = 'https://github.com/mattdos'
-
 
   constructor(private homeCanvas: HomeCanvas) {
 
   }
 
-  ngAfterViewInit() {
-
+  ngOnInit(): void {
+    this.homeCanvas.displayBackground()
   }
 
-  ngOnInit(): void {
-    this.homeCanvas.displayBackground();
+  ngAfterViewInit() {
+
   }
 }
