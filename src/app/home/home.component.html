@@ -1,19 +1,19 @@
+<canvas id="bg"></canvas>
 <section id="main">
-  <span></span>
+  <div id="container">
+    <section id="header">
+      <a routerLink=""><h1 id="title">{{title}}</h1></a>
+    </section>
 
-  <section id="header">
-    <a routerLink=""><h1 id="title">{{title}}</h1></a>
-  </section>
+    <section id="skills">
+      <div class="option" *ngFor="let a of skills">{{ a }}</div>
+    </section>
 
-  <section id="skills">
-    <div class="option" *ngFor="let a of skills">{{ a }}</div>
-  </section>
-
-  <section id="content">
-    <h2>Projects</h2>
-
-<!--    <li><a routerLink="wordle">Link</a></li>-->
-  </section>
-
-  <section id="footer">This site was made using Angular.</section>
+    <section id="referrals">
+      <a href="{{ gitlab }}" class="home-referral">
+        <img alt="GitLab" src="/assets/gitlab.svg">
+        <p class="name">GitLab</p>
+      </a>
+    </section>
+  </div>
 </section>

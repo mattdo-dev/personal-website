@@ -1,19 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { HomeCanvas } from "./home.canvas";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+  styleUrls: ['./home.component.sass'],
+  providers: [HomeCanvas]
 })
 
-export class HomeComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+export class HomeComponent implements AfterViewInit {
   title: string = 'mattdo.dev'
   skills: Array<string> = [
     'Python',
@@ -23,6 +18,22 @@ export class HomeComponent implements OnInit {
     'JavaScript',
     'TypeScript',
     'Node.js',
-    'git'
+    'git',
+    'Web UI/UX'
   ]
+  gitlab: string = 'https://gitlab.com/mattdos'
+  github: string = 'https://github.com/mattdos'
+
+
+  constructor(private homeCanvas: HomeCanvas) {
+
+  }
+
+  ngAfterViewInit() {
+
+  }
+
+  ngOnInit(): void {
+    this.homeCanvas.displayBackground();
+  }
 }

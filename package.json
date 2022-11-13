@@ -20,11 +20,12 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@types/three": "^0.143.0",
+    "@types/three": "^0.143.2",
     "anime": "^0.1.2",
     "animejs": "^3.2.1",
     "rxjs": "~7.5.0",
     "three": "^0.143.0",
+    "three-globe": "^2.24.10",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

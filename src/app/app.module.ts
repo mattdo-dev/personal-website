@@ -5,20 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WordleComponent } from './wordle/wordle.component';
 import { HomeComponent } from './home/home.component';
-import { ThreeComponent } from './three/three.component';
+import { HomeCanvas } from "./home/home.canvas";
 
 @NgModule({
   declarations: [
     AppComponent,
     WordleComponent,
     HomeComponent,
-    ThreeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [HomeCanvas],
   bootstrap: [AppComponent]
 })
 export class AppModule {
